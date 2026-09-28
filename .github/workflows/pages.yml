@@ -1,0 +1,54 @@
+name: Publish approved portal to Pages
+
+on:
+  workflow_dispatch:
+    inputs:
+      expected_sha:
+        description: Full publishing main commit SHA approved for public publication
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages-publication
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - name: Guard approved main revision
+        shell: pwsh
+        env:
+          EXPECTED_SHA: ${{ inputs.expected_sha }}
+          ACTUAL_SHA: ${{ github.sha }}
+          ACTUAL_REF: ${{ github.ref }}
+        run: |
+          if ($env:ACTUAL_REF -cne 'refs/heads/main' -or $env:EXPECTED_SHA -cnotmatch '^[0-9a-f]{40}$' -or $env:EXPECTED_SHA -cne $env:ACTUAL_SHA) {
+            throw 'Publication requires main and its exact approved 40-character commit SHA.'
+          }
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Check public inventory and hashes
+        run: node scripts/check-output.mjs
+      - name: Upload reviewed public directory
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
+        with:
+          path: public/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy approved artifact
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
