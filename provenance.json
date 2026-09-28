@@ -1,0 +1,63 @@
+{
+  "sourceRepository": "joseluisillana/jose-luis-illana-portfolio",
+  "sourceSha": "67fd1c35218a9742828b235bc4ed5743c9c5e7cb",
+  "sourceManifestSha256": "c82f61c8b8b9c045242ca550f799d234f2caaec1b026d7d1192a1d71d7514c97",
+  "base": "/jose-luis-illana-portfolio",
+  "files": [
+    {
+      "path": "_astro/Portal.astro_astro_type_script_index_0_lang.DXsIBRW6.js",
+      "bytes": 2669,
+      "sha256": "5ee6b5ce69677798a8df7e382afa20fae18e76e6d8b4586a0f72763bb9e45b43"
+    },
+    {
+      "path": "_astro/index.astro_astro_type_script_index_0_lang.BpGFNAza.js",
+      "bytes": 256,
+      "sha256": "cbdc6fa9b9456cdc4373b55464371fb211e22ff766996ed7421dda57b4105ab2"
+    },
+    {
+      "path": "_astro/preferences.BWGjSLxZ.js",
+      "bytes": 583,
+      "sha256": "344980599189b4fc1de507cc4f7819f0e7f64c1c89d7369c27d073aa674a47aa"
+    },
+    {
+      "path": "assets/jose-luis-illana-cv-en.pdf",
+      "bytes": 172002,
+      "sha256": "aa2782409dc5d05e2fbe18f1e999141e7e3dd37a2400ffcdb78a92fdcee7f69c"
+    },
+    {
+      "path": "assets/jose-luis-illana-cv-es.pdf",
+      "bytes": 173688,
+      "sha256": "176b168a5f00f07b7f9cc4ce5a0014407c4157638f1c9e994538f7aab6a44717"
+    },
+    {
+      "path": "assets/jose-luis-illana-portrait.jpg",
+      "bytes": 39908,
+      "sha256": "b1de6bfea516f4d4a8908dbfef5d383628980992d397b4937976420f904f8c43"
+    },
+    {
+      "path": "en/cv/index.html",
+      "bytes": 17166,
+      "sha256": "f66de6916c2867dc4de1eac61690f3cd53b10dff4619a5b7669f25a66c2f4b31"
+    },
+    {
+      "path": "en/index.html",
+      "bytes": 10169,
+      "sha256": "364668fe2e142d58781d7b36b859e7645f5481edcc161820f97396165bb92be5"
+    },
+    {
+      "path": "es/cv/index.html",
+      "bytes": 17924,
+      "sha256": "8e4a99ed41e2677380d87a253278b0d6fd94e8109b2cca7eb779dd489d052f44"
+    },
+    {
+      "path": "es/index.html",
+      "bytes": 10423,
+      "sha256": "2714ee2953aba3074625623350042f39f5a2a9dbd2f479a6603a26d84f7cf05b"
+    },
+    {
+      "path": "index.html",
+      "bytes": 533,
+      "sha256": "73d0979d86617d3dd9c345880866b180151fbb1e7317bdbb497e23fd168fc706"
+    }
+  ]
+}

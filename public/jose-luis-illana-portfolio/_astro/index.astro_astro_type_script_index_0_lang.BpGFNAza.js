@@ -1,0 +1,1 @@
+import{a as e,i as t,r as n}from"./preferences.BWGjSLxZ.js";var r,i;try{r=e(localStorage,t,[`es`,`en`])}catch{}try{i=navigator.languages}catch{}var a=document.querySelector(`#fallback`);try{location.replace(a.pathname.replace(`/es/`,`/${n(r,i)}/`))}catch{}
