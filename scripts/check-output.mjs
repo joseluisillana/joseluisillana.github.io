@@ -3,12 +3,15 @@ import { createHash } from 'node:crypto';
 import { join, relative, sep } from 'node:path';
 import assert from 'node:assert/strict';
 
-const publicRoot = 'public';
+const candidateRoot = process.argv[2] ?? '.';
+const publicRoot = join(candidateRoot, 'public');
 const siteRoot = join(publicRoot, 'jose-luis-illana-portfolio');
-const manifest = JSON.parse(await readFile('provenance.json', 'utf8'));
+const manifest = JSON.parse(await readFile(join(candidateRoot, 'provenance.json'), 'utf8'));
 
 assert.equal(manifest.sourceRepository, 'joseluisillana/jose-luis-illana-portfolio');
 assert.match(manifest.sourceSha, /^[0-9a-f]{40}$/);
+if (manifest.sourceVersion !== undefined) assert.match(manifest.sourceVersion, /^v(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)$/);
+if (manifest.publishingVersion !== undefined) assert.match(manifest.publishingVersion, /^v(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)$/);
 assert.match(manifest.sourceManifestSha256, /^[0-9a-f]{64}$/);
 assert.equal(manifest.base, '/jose-luis-illana-portfolio');
 assert.equal(manifest.files.length, 11);

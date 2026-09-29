@@ -3,8 +3,12 @@ name: Publish approved portal to Pages
 on:
   workflow_dispatch:
     inputs:
+      publishing_version:
+        description: Published immutable publishing Release tag (vX.Y.Z)
+        required: true
+        type: string
       expected_sha:
-        description: Full publishing main commit SHA approved for public publication
+        description: Full publishing commit SHA approved for this deployment
         required: true
         type: string
 
@@ -20,23 +24,43 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 5
     steps:
-      - name: Guard approved main revision
-        shell: pwsh
+      - name: Guard reviewed workflow and owner dispatch
+        shell: bash
         env:
+          PUBLISHING_VERSION: ${{ inputs.publishing_version }}
           EXPECTED_SHA: ${{ inputs.expected_sha }}
-          ACTUAL_SHA: ${{ github.sha }}
           ACTUAL_REF: ${{ github.ref }}
+          ACTOR: ${{ github.actor }}
+          REPOSITORY: ${{ github.repository }}
         run: |
-          if ($env:ACTUAL_REF -cne 'refs/heads/main' -or $env:EXPECTED_SHA -cnotmatch '^[0-9a-f]{40}$' -or $env:EXPECTED_SHA -cne $env:ACTUAL_SHA) {
-            throw 'Publication requires main and its exact approved 40-character commit SHA.'
-          }
+          [[ "$ACTUAL_REF" == 'refs/heads/main' ]]
+          [[ "$REPOSITORY" == 'joseluisillana/joseluisillana.github.io' ]]
+          [[ "$ACTOR" == 'joseluisillana' ]]
+          [[ "$PUBLISHING_VERSION" =~ ^v(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]]
+          [[ "$EXPECTED_SHA" =~ ^[0-9a-f]{40}$ ]]
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Fetch selected protected tag and exact candidate
+        shell: bash
+        env:
+          PUBLISHING_VERSION: ${{ inputs.publishing_version }}
+          EXPECTED_SHA: ${{ inputs.expected_sha }}
+        run: |
+          git fetch --no-tags origin "refs/tags/${PUBLISHING_VERSION}:refs/tags/${PUBLISHING_VERSION}"
+          ACTUAL_SHA="$(git rev-parse "refs/tags/${PUBLISHING_VERSION}^{commit}")"
+          [[ "$ACTUAL_SHA" == "$EXPECTED_SHA" ]]
+          git worktree add --detach candidate "$EXPECTED_SHA"
+      - name: Check published Release and protected provenance
+        env:
+          PUBLISHING_VERSION: ${{ inputs.publishing_version }}
+          EXPECTED_SHA: ${{ inputs.expected_sha }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/check-release.mjs candidate
       - name: Check public inventory and hashes
-        run: node scripts/check-output.mjs
+        run: node scripts/check-output.mjs candidate
       - name: Upload reviewed public directory
         uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
         with:
-          path: public/
+          path: candidate/public/
 
   deploy:
     needs: build
