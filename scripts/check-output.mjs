@@ -3,15 +3,28 @@ import { createHash } from 'node:crypto';
 import { join, relative, sep } from 'node:path';
 import assert from 'node:assert/strict';
 
-const publicRoot = 'public';
+const candidateRoot = process.argv[2] ?? '.';
+const publicRoot = join(candidateRoot, 'public');
 const siteRoot = join(publicRoot, 'jose-luis-illana-portfolio');
-const manifest = JSON.parse(await readFile('provenance.json', 'utf8'));
+const manifest = JSON.parse(await readFile(join(candidateRoot, 'provenance.json'), 'utf8'));
 
 assert.equal(manifest.sourceRepository, 'joseluisillana/jose-luis-illana-portfolio');
 assert.match(manifest.sourceSha, /^[0-9a-f]{40}$/);
+if (manifest.sourceVersion !== undefined) assert.match(manifest.sourceVersion, /^v(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)$/);
+if (manifest.publishingVersion !== undefined) assert.match(manifest.publishingVersion, /^v(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)$/);
 assert.match(manifest.sourceManifestSha256, /^[0-9a-f]{64}$/);
 assert.equal(manifest.base, '/jose-luis-illana-portfolio');
-assert.equal(manifest.files.length, 11);
+assert(Array.isArray(manifest.files) && manifest.files.length > 0, 'Public manifest must list files');
+
+const requiredPaths = new Set([
+  'index.html',
+  'es/index.html',
+  'en/index.html',
+  'es/cv/index.html',
+  'en/cv/index.html',
+  'assets/jose-luis-illana-cv-es.pdf',
+  'assets/jose-luis-illana-cv-en.pdf',
+]);
 
 async function filesUnder(directory) {
   const files = [];
@@ -37,10 +50,12 @@ for (const file of manifest.files) {
   assert.match(file.sha256, /^[0-9a-f]{64}$/);
   const target = `jose-luis-illana-portfolio/${file.path}`;
   expected.add(target);
+  requiredPaths.delete(file.path);
   const data = await readFile(join(siteRoot, file.path));
   assert.equal(data.length, file.bytes, `Byte count: ${target}`);
   assert.equal(createHash('sha256').update(data).digest('hex'), file.sha256, `SHA-256: ${target}`);
 }
+assert.equal(requiredPaths.size, 0, `Missing required public paths: ${[...requiredPaths].join(', ')}`);
 
 const actual = (await filesUnder(publicRoot)).sort();
 assert.deepEqual(actual, [...expected].sort(), 'Public inventory differs from provenance');
