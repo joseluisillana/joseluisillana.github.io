@@ -1,7 +1,5 @@
 {
-  "sourceSha": "6c5ed5a69eefa6266d2f661b5ffcb2021a564a9e",
-  "sourceManifestSha256": "cd1a125ebb85ade5ea82a2e00abb07078e4a202695908867000e120ca5ecdadd",
-  "sourceRepository": "joseluisillana/jose-luis-illana-portfolio",
+  "sourceManifestSha256": "43373c7feda1b136da31f4fc78daf804d6b85f0a7a8eba16317a24907cdbe3d1",
   "base": "/jose-luis-illana-portfolio",
   "files": [
     {
@@ -64,5 +62,7 @@
       "bytes": 533,
       "sha256": "73d0979d86617d3dd9c345880866b180151fbb1e7317bdbb497e23fd168fc706"
     }
-  ]
+  ],
+  "sourceSha": "73ca95df752d1bb0f27f781dd6755414822d6195",
+  "sourceRepository": "joseluisillana/jose-luis-illana-portfolio"
 }
