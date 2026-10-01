@@ -20,8 +20,6 @@ const requiredPaths = new Set([
   'index.html',
   'es/index.html',
   'en/index.html',
-  'es/cv/index.html',
-  'en/cv/index.html',
   'assets/jose-luis-illana-cv-es.pdf',
   'assets/jose-luis-illana-cv-en.pdf',
 ]);
