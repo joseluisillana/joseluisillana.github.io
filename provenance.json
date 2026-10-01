@@ -2,8 +2,8 @@
   "sourceRepository": "joseluisillana/jose-luis-illana-portfolio",
   "sourceSha": "d058852ef0b85f474b2fe9c75b0e71152f7f78f6",
   "sourceVersion": "v4.0.0",
-  "publishingVersion": "v4.0.0",
-  "sourceManifestSha256": "fd2f9682a094c07c12d82c3a5aa623ca715952e30415afc6cbc37205d0f3335e",
+  "publishingVersion": "v4.0.1",
+  "sourceManifestSha256": "29bfafbc7699b9a1bd8e154a56b25354de2a19fef906bdf6fc99c60262f52699",
   "base": "/jose-luis-illana-portfolio",
   "files": [
     {
@@ -23,13 +23,13 @@
     },
     {
       "path": "en/index.html",
-      "bytes": 14706,
-      "sha256": "41824cfbbca558df969a51f2119354386609ad7c3bf34321e23324bb8890310a"
+      "bytes": 15776,
+      "sha256": "ed7cb78c6641dfaa82f2e63b34f559bebe77bff43bce06e1f336586e99a48b96"
     },
     {
       "path": "es/index.html",
-      "bytes": 15463,
-      "sha256": "07f02fa26c5afae34f1ed02b981ae8dfb393a8c48640bab3e9bb73a8eb172fa2"
+      "bytes": 16155,
+      "sha256": "1c13d5559b98f4f7b5d1c7253525a5650e2c1005da13010bda9b751e1f96cb61"
     },
     {
       "path": "index.html",
@@ -42,14 +42,14 @@
       "sha256": "cbdc6fa9b9456cdc4373b55464371fb211e22ff766996ed7421dda57b4105ab2"
     },
     {
-      "path": "_astro/index.BOrDrVcD.css",
-      "bytes": 9542,
-      "sha256": "e6417e85d42547db72912206563a7a4b2f157faa129d5b116c1f2ff12dcf2364"
+      "path": "_astro/index.DE61ji_J.css",
+      "bytes": 11418,
+      "sha256": "f8617185a37315de2d1de76271599ba575b712c1f9b0d0cfa4a24cafefcf50db"
     },
     {
-      "path": "_astro/Portal.astro_astro_type_script_index_0_lang.DXsIBRW6.js",
-      "bytes": 2669,
-      "sha256": "5ee6b5ce69677798a8df7e382afa20fae18e76e6d8b4586a0f72763bb9e45b43"
+      "path": "_astro/Portal.astro_astro_type_script_index_0_lang.DhNzF9Ip.js",
+      "bytes": 3266,
+      "sha256": "92f940ec428d85be3be06eb855a5547c0bab8643271dc64d403c1c6be82bfec5"
     },
     {
       "path": "_astro/preferences.BWGjSLxZ.js",
