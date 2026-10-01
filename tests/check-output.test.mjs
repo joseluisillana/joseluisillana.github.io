@@ -22,13 +22,13 @@ test('accepts a complete larger inventory and rejects a missing required route',
     await writeFile(join(candidate, 'provenance.json'), JSON.stringify(manifest));
     const valid = check();
     assert.equal(valid.status, 0, valid.stderr);
-    assert.match(valid.stdout, /Validated 13 public files/);
+    assert.match(valid.stdout, /Validated 12 public files/);
 
-    manifest.files = manifest.files.filter((file) => file.path !== 'en/cv/index.html');
+    manifest.files = manifest.files.filter((file) => file.path !== 'en/index.html');
     await writeFile(join(candidate, 'provenance.json'), JSON.stringify(manifest));
     const invalid = check();
     assert.notEqual(invalid.status, 0);
-    assert.match(invalid.stderr, /Missing required public paths: en\/cv\/index\.html/);
+    assert.match(invalid.stderr, /Missing required public paths: en\/index\.html/);
   } finally {
     await rm(candidate, { recursive: true, force: true });
   }
