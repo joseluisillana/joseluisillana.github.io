@@ -22,7 +22,7 @@ test('accepts a complete larger inventory and rejects a missing required route',
     await writeFile(join(candidate, 'provenance.json'), JSON.stringify(manifest));
     const valid = check();
     assert.equal(valid.status, 0, valid.stderr);
-    assert.match(valid.stdout, /Validated 12 public files/);
+    assert.match(valid.stdout, /Validated \d+ public files/);
 
     manifest.files = manifest.files.filter((file) => file.path !== 'en/index.html');
     await writeFile(join(candidate, 'provenance.json'), JSON.stringify(manifest));

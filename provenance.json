@@ -1,29 +1,11 @@
 {
-  "sourceVersion": "v3.0.0",
-  "publishingVersion": "v3.0.1",
-  "sourceManifestSha256": "f1916b41c154620bcde4d63b136d8e2e67cdf2cc446fc882e1b6b60de3443270",
-  "sourceSha": "32cc409a43fb366519f9fb53c667b192c3181c83",
+  "sourceRepository": "joseluisillana/jose-luis-illana-portfolio",
+  "sourceSha": "d058852ef0b85f474b2fe9c75b0e71152f7f78f6",
+  "sourceVersion": "v4.0.0",
+  "publishingVersion": "v4.0.0",
+  "sourceManifestSha256": "fd2f9682a094c07c12d82c3a5aa623ca715952e30415afc6cbc37205d0f3335e",
+  "base": "/jose-luis-illana-portfolio",
   "files": [
-    {
-      "path": "_astro/Portal.astro_astro_type_script_index_0_lang.DXsIBRW6.js",
-      "bytes": 2669,
-      "sha256": "5ee6b5ce69677798a8df7e382afa20fae18e76e6d8b4586a0f72763bb9e45b43"
-    },
-    {
-      "path": "_astro/index.BOrDrVcD.css",
-      "bytes": 9542,
-      "sha256": "e6417e85d42547db72912206563a7a4b2f157faa129d5b116c1f2ff12dcf2364"
-    },
-    {
-      "path": "_astro/index.astro_astro_type_script_index_0_lang.BpGFNAza.js",
-      "bytes": 256,
-      "sha256": "cbdc6fa9b9456cdc4373b55464371fb211e22ff766996ed7421dda57b4105ab2"
-    },
-    {
-      "path": "_astro/preferences.BWGjSLxZ.js",
-      "bytes": 583,
-      "sha256": "344980599189b4fc1de507cc4f7819f0e7f64c1c89d7369c27d073aa674a47aa"
-    },
     {
       "path": "assets/jose-luis-illana-cv-en.pdf",
       "bytes": 172002,
@@ -53,8 +35,26 @@
       "path": "index.html",
       "bytes": 533,
       "sha256": "73d0979d86617d3dd9c345880866b180151fbb1e7317bdbb497e23fd168fc706"
+    },
+    {
+      "path": "_astro/index.astro_astro_type_script_index_0_lang.BpGFNAza.js",
+      "bytes": 256,
+      "sha256": "cbdc6fa9b9456cdc4373b55464371fb211e22ff766996ed7421dda57b4105ab2"
+    },
+    {
+      "path": "_astro/index.BOrDrVcD.css",
+      "bytes": 9542,
+      "sha256": "e6417e85d42547db72912206563a7a4b2f157faa129d5b116c1f2ff12dcf2364"
+    },
+    {
+      "path": "_astro/Portal.astro_astro_type_script_index_0_lang.DXsIBRW6.js",
+      "bytes": 2669,
+      "sha256": "5ee6b5ce69677798a8df7e382afa20fae18e76e6d8b4586a0f72763bb9e45b43"
+    },
+    {
+      "path": "_astro/preferences.BWGjSLxZ.js",
+      "bytes": 583,
+      "sha256": "344980599189b4fc1de507cc4f7819f0e7f64c1c89d7369c27d073aa674a47aa"
     }
-  ],
-  "base": "/jose-luis-illana-portfolio",
-  "sourceRepository": "joseluisillana/jose-luis-illana-portfolio"
+  ]
 }
