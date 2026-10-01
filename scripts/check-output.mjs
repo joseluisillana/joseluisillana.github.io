@@ -22,6 +22,7 @@ const requiredPaths = new Set([
   'en/index.html',
   'assets/jose-luis-illana-cv-es.pdf',
   'assets/jose-luis-illana-cv-en.pdf',
+  'assets/jose-luis-illana-portrait.jpg',
 ]);
 
 async function filesUnder(directory) {
