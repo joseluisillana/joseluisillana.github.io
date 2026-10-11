@@ -1,40 +1,20 @@
 {
   "sourceRepository": "joseluisillana/jose-luis-illana-portfolio",
-  "sourceSha": "d058852ef0b85f474b2fe9c75b0e71152f7f78f6",
-  "sourceVersion": "v4.0.0",
-  "publishingVersion": "v4.0.2",
-  "sourceManifestSha256": "29bfafbc7699b9a1bd8e154a56b25354de2a19fef906bdf6fc99c60262f52699",
+  "sourceSha": "2dbbd0cd3f5ee1eb5502dab1146a0ae687c2b5a6",
+  "sourceVersion": "v4.2.0",
+  "publishingVersion": "v4.1.0",
+  "sourceManifestSha256": "00bee40df6f5b5a7dac6399691d04bdba7bbd781595e34403bc76a93982df61c",
   "base": "/jose-luis-illana-portfolio",
   "files": [
     {
-      "path": "assets/jose-luis-illana-cv-en.pdf",
-      "bytes": 172002,
-      "sha256": "aa2782409dc5d05e2fbe18f1e999141e7e3dd37a2400ffcdb78a92fdcee7f69c"
+      "path": "_astro/Portal.astro_astro_type_script_index_0_lang.DKrWmR1H.js",
+      "bytes": 5938,
+      "sha256": "9f998a98a7c1694654c00bfefc8d2dfccca046ff4a33623bb6d33a632d859a0f"
     },
     {
-      "path": "assets/jose-luis-illana-cv-es.pdf",
-      "bytes": 173688,
-      "sha256": "176b168a5f00f07b7f9cc4ce5a0014407c4157638f1c9e994538f7aab6a44717"
-    },
-    {
-      "path": "assets/jose-luis-illana-portrait.jpg",
-      "bytes": 39908,
-      "sha256": "b1de6bfea516f4d4a8908dbfef5d383628980992d397b4937976420f904f8c43"
-    },
-    {
-      "path": "en/index.html",
-      "bytes": 15776,
-      "sha256": "ed7cb78c6641dfaa82f2e63b34f559bebe77bff43bce06e1f336586e99a48b96"
-    },
-    {
-      "path": "es/index.html",
-      "bytes": 16155,
-      "sha256": "1c13d5559b98f4f7b5d1c7253525a5650e2c1005da13010bda9b751e1f96cb61"
-    },
-    {
-      "path": "index.html",
-      "bytes": 533,
-      "sha256": "73d0979d86617d3dd9c345880866b180151fbb1e7317bdbb497e23fd168fc706"
+      "path": "_astro/Portal.yQ_hYy-i.css",
+      "bytes": 9502,
+      "sha256": "e9859ba1fd1112bad2e20d2556289ed6a1befdb9b2fe99557a1202d226e0d6ae"
     },
     {
       "path": "_astro/index.astro_astro_type_script_index_0_lang.BpGFNAza.js",
@@ -42,19 +22,79 @@
       "sha256": "cbdc6fa9b9456cdc4373b55464371fb211e22ff766996ed7421dda57b4105ab2"
     },
     {
-      "path": "_astro/index.DE61ji_J.css",
-      "bytes": 11418,
-      "sha256": "f8617185a37315de2d1de76271599ba575b712c1f9b0d0cfa4a24cafefcf50db"
-    },
-    {
-      "path": "_astro/Portal.astro_astro_type_script_index_0_lang.DhNzF9Ip.js",
-      "bytes": 3266,
-      "sha256": "92f940ec428d85be3be06eb855a5547c0bab8643271dc64d403c1c6be82bfec5"
-    },
-    {
       "path": "_astro/preferences.BWGjSLxZ.js",
       "bytes": 583,
       "sha256": "344980599189b4fc1de507cc4f7819f0e7f64c1c89d7369c27d073aa674a47aa"
+    },
+    {
+      "path": "assets/jose-luis-illana-cv-en.docx",
+      "bytes": 51884,
+      "sha256": "79a67aee4761a0fc4eb5b5604581aef3841d4eb089748e98fad111fe0161b54e"
+    },
+    {
+      "path": "assets/jose-luis-illana-cv-en.pdf",
+      "bytes": 99212,
+      "sha256": "dea4e6379ea5b05e9c0de55657a10e61f4ff80ab1b20ac1b0b390bd7f40a2b96"
+    },
+    {
+      "path": "assets/jose-luis-illana-cv-es.docx",
+      "bytes": 51996,
+      "sha256": "5dc2cdf7ba939bf1bd9237f1bd56da22dd3f9c7ebb5d91f0688d884025b6ded3"
+    },
+    {
+      "path": "assets/jose-luis-illana-cv-es.pdf",
+      "bytes": 100020,
+      "sha256": "02e86d0e584e3e7010d5ec93dddfe7bfa5a84b91214ec2a0f5f4919c9a5afc57"
+    },
+    {
+      "path": "assets/jose-luis-illana-portrait.jpg",
+      "bytes": 39908,
+      "sha256": "b1de6bfea516f4d4a8908dbfef5d383628980992d397b4937976420f904f8c43"
+    },
+    {
+      "path": "en/cv/index.html",
+      "bytes": 20633,
+      "sha256": "d3caf98595679c5a7134460968cd4c3621302c1a52a7a4990fc512e27a3911b2"
+    },
+    {
+      "path": "en/index.html",
+      "bytes": 20700,
+      "sha256": "2e9ef74fd351a78cc2ab99754394e61f5daf9ef09a3e5e5af5143bcd132c4701"
+    },
+    {
+      "path": "en/profile.md",
+      "bytes": 6880,
+      "sha256": "223f39032170a790cbe96a79045a3598a1e8b352c0e8957a1306c11242f713ec"
+    },
+    {
+      "path": "es/cv/index.html",
+      "bytes": 21512,
+      "sha256": "ef22f66499f5f1a5b0c41646b52c4cfa4ebf5dd9ad4ac12a30bbbc4eca5cb860"
+    },
+    {
+      "path": "es/index.html",
+      "bytes": 21573,
+      "sha256": "3cc6c5f496672864f5fb5b003d9f4071f6b67aa597f6866d7781f66775be5b97"
+    },
+    {
+      "path": "es/profile.md",
+      "bytes": 7450,
+      "sha256": "2fefd947d2add22a2447c9b352b313b2fc9bd9a5719f0f8ccba26434b2fac35a"
+    },
+    {
+      "path": "index.html",
+      "bytes": 533,
+      "sha256": "73d0979d86617d3dd9c345880866b180151fbb1e7317bdbb497e23fd168fc706"
+    },
+    {
+      "path": "llms.txt",
+      "bytes": 448,
+      "sha256": "0fe67821ab15b6cf9c9a63f884330906092ee909b4b81e359edd23b19314868d"
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 468,
+      "sha256": "f6c7b791a8b30afdbcf7b607f377a190bca8fc676559049f7088c2d9ba384619"
     }
   ]
 }

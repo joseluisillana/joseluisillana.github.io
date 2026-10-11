@@ -1,0 +1,8 @@
+# José Luis Illana Ruiz
+
+> Complete public professional profile in Spanish and English.
+
+## Profiles
+
+- [Español](https://joseluisillana.github.io/jose-luis-illana-portfolio/es/profile.md): full professional history, skills, education, training and approved public contact.
+- [English](https://joseluisillana.github.io/jose-luis-illana-portfolio/en/profile.md): full professional history, skills, education, training and approved public contact.
